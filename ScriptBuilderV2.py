@@ -12,7 +12,8 @@ while (code != 'q'):
 	if code != 'q':
 		code = only_numerics(code)
 		arr.append(code)
-	
+	if not code:
+		arr.pop()
 	
 
 f= open("RenameMeToSomethingUsefulAndNotAsLong.script","w+")	
