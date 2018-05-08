@@ -18,6 +18,10 @@ while (code != 'q'):
 
 f= open("RenameMeToSomethingUsefulAndNotAsLong.script","w+")	
 
+f.write("rng vals" + "\n")
+f.write("\n")
+
+
 f.write("1" + "\n")
 f.write(str(len(arr)) + "\n")
 for i in range(len(arr)):
@@ -27,6 +31,7 @@ f.write("\n")
 for i in range(len(arr)):
 	f.write(str(arr[i]) + "\n")
 
+f.write("deal")
 print(arr)
 
 
