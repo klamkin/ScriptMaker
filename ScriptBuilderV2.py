@@ -21,7 +21,11 @@ print ('3. Paste into this program (ctrl + v) \n')
 print ('4. Hit Enter \n')
 print ('5. Type "q" and hit Enter \n')
 print ('NOTE - Remember to rename your script to something descriptive \n')
+
+# Asking for a name for the file to be created
 name = input('Please enter a name for your script: \n')
+
+# While loop continues until a name has been entered that does not match an existing file
 while (isThere):
 	if os.path.isfile(name + ".script"):
 		isThere = True
