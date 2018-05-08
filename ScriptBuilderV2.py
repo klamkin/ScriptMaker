@@ -1,5 +1,9 @@
-import os.path
+import os
 isThere = True
+
+# Creates the scripts folder if not already there
+if not os.path.exists('scripts'):
+    os.makedirs('scripts')
 
 # Declaring the array used to store the values
 arr = []
@@ -27,7 +31,7 @@ name = input('Please enter a name for your script: \n')
 
 # While loop continues until a name has been entered that does not match an existing file
 while (isThere):
-	if os.path.isfile(name + ".script"):
+	if os.path.isfile("scripts/" + name + ".script"):
 		isThere = True
 		print ("That name already exists, Please choose a different name")
 	else:
@@ -51,7 +55,7 @@ while (code != 'q'):
 		arr.pop()
 #Attempts to write to a file	
 try:
-	f= open(name + ".script","w+")	
+	f= open("scripts/" + name + ".script","w+")	
 
 	f.write("rng vals" + "\n")
 	f.write("\n")
